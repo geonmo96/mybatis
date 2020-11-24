@@ -13,4 +13,7 @@ public class TestService {
 	public void test(Model model) {
 		model.addAttribute("list", dao.test());
 	}
+	public void list(Model model, String num) {
+		model.addAttribute("list", dao.list(num));
+	}
 }

@@ -18,4 +18,8 @@ public class TestDAO {
 	public List<TestDTO> test(){
 		return sqlSession.selectList(namespace + ".listAll");
 	}
+	
+	public TestDTO list(String num) {
+		return sqlSession.selectOne(namespace + ".list", num); 
+	}
 }
