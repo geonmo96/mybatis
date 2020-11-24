@@ -10,7 +10,7 @@
 	<h4>test.jsp</h4>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	<c:forEach var="dto" items="${list }">
-		num : ${dto.num }<br>
+		num : <a href="delete?num=${dto.num }">${dto.num }</a><br>
 		name : ${dto.name }<br>
 		mydate : ${dto.mydate }<hr>	
 	</c:forEach>

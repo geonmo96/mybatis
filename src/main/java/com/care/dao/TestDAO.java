@@ -22,4 +22,14 @@ public class TestDAO {
 	public TestDTO list(String num) {
 		return sqlSession.selectOne(namespace + ".list", num); 
 	}
+	
+	public void savedata(TestDTO dto) {
+		int result = sqlSession.insert(namespace + ".savedata", dto);
+	}
+	public void updatedata(TestDTO dto) {
+		int result = sqlSession.update(namespace + ".updatedata", dto);
+	}
+	public void delete(String num) {
+		sqlSession.delete(namespace + ".delete", num);
+	}
 }

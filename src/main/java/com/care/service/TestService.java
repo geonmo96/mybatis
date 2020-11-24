@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import com.care.dao.TestDAO;
+import com.care.dto.TestDTO;
 
 @Service
 public class TestService {
@@ -15,5 +16,14 @@ public class TestService {
 	}
 	public void list(Model model, String num) {
 		model.addAttribute("list", dao.list(num));
+	}
+	public void savedata(TestDTO dto) {
+		dao.savedata(dto);
+	}
+	public void updatedata(TestDTO dto) {
+		dao.updatedata(dto);
+	}
+	public void delete(String num) {
+		dao.delete(num);
 	}
 }
