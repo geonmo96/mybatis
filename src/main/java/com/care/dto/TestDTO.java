@@ -2,6 +2,9 @@ package com.care.dto;
 
 import java.sql.Date;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TestDTO {
 	private int num;
 	private String name;
